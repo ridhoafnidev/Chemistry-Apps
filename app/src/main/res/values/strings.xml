@@ -5,4 +5,8 @@
     <string name="label_btn_faq">FAQs</string>
     <string name="label_conversations">Your users can message you in real time</string>
     <string name="label_btn_conversations">Conversations</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_logout">Logout</string>
 </resources>
