@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/action_profile"-->
+<!--        android:icon="@drawable/ic_person_grey"-->
+<!--        android:orderInCategory="100"-->
+<!--        android:title="Profile"-->
+<!--        app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_power_settings_grey"
+        android:title="Logout"
+        app:showAsAction="never" />
+</menu>

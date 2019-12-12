@@ -1,5 +1,11 @@
 package com.example.hajidanumroh.Util.Api;
 
+import com.example.hajidanumroh.Response.ResponseDoa;
+import com.example.hajidanumroh.Response.ResponseKegiatan;
+import com.example.hajidanumroh.Response.ResponseLarangan;
+import com.example.hajidanumroh.Response.ResponseMateri;
+import com.example.hajidanumroh.Response.ResponseUserDetail;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -19,8 +25,13 @@ public interface BaseApiService {
     // Fungsi ini untuk memanggil API http://10.0.2.2/mahasiswa/register.php
     @FormUrlEncoded
     @POST("register.php")
-    Call<ResponseBody> registerRequest(@Field("nama") String nama,
+    Call<ResponseBody> registerRequest(
+                                       @Field("username") String username,
+                                       @Field("nama_awal") String nama_awal,
+                                       @Field("nama_akhir") String nama_akhir,
                                        @Field("email") String email,
+                                       @Field("nomor_hp") String nomor_hp,
+                                       @Field("alamat") String alamat,
                                        @Field("password") String password);
 
     @FormUrlEncoded
@@ -28,16 +39,23 @@ public interface BaseApiService {
     Call<ResponseBody> updateRequest(@Field("id_user") String id_user,
                                      @Field("restore_id") String restore_id);
 
+    @GET("materi")
+    Call<ResponseMateri> getSemuaMateri();
+
+    @GET("larangan")
+    Call<ResponseLarangan> getSemuaLarangan();
+
+    @GET("doa")
+    Call<ResponseDoa> getSemuaDoa();
+
+    @GET("kegiatan")
+    Call<ResponseKegiatan> getSemuaKegiatan();
+
+
+    @GET("user/{id}")
+    Call<ResponseUserDetail> getDetailUser(@Path("id") String id);
+
     /*
-    @GET("semuadosen")
-    Call<ResponseDosen> getSemuaDosen();
-
-    @GET("dosen/{namadosen}")
-    Call<ResponseDosenDetail> getDetailDosen(@Path("namadosen") String namadosen);
-
-    @GET("matkul")
-    Call<ResponseMatkul> getSemuaMatkul();
-
     @FormUrlEncoded
     @POST("matkul")
     Call<ResponseBody> simpanMatkulRequest(@Field("nama_dosen") String namadosen,

@@ -23,11 +23,11 @@
             android:text="REGISTER"/>
 
         <EditText
-            android:id="@+id/etNama"
+            android:id="@+id/et_username"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama"
+            android:hint="Username"
             android:textColorHint="#80FFFFFF"
             android:padding="8dp"
             android:inputType="textPersonName"
@@ -35,7 +35,31 @@
             android:textColor="#80FFFFFF"/>
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/et_nama_awal"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Awal"
+            android:textColorHint="#80FFFFFF"
+            android:padding="8dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/bg_rectangle_edittext"
+            android:textColor="#80FFFFFF"/>
+
+        <EditText
+            android:id="@+id/et_nama_akhir"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Akhir"
+            android:textColorHint="#80FFFFFF"
+            android:padding="8dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/bg_rectangle_edittext"
+            android:textColor="#80FFFFFF"/>
+
+        <EditText
+            android:id="@+id/et_email"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +71,7 @@
             android:textColor="#80FFFFFF"/>
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/et_password"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,6 +79,30 @@
             android:textColorHint="#80FFFFFF"
             android:inputType="textPassword"
             android:padding="8dp"
+            android:background="@drawable/bg_rectangle_edittext"
+            android:textColor="#80FFFFFF"/>
+
+        <EditText
+            android:id="@+id/et_no_hp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Handphone"
+            android:textColorHint="#80FFFFFF"
+            android:padding="8dp"
+            android:inputType="number"
+            android:background="@drawable/bg_rectangle_edittext"
+            android:textColor="#80FFFFFF"/>
+
+        <EditText
+            android:id="@+id/et_alamat"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            android:textColorHint="#80FFFFFF"
+            android:padding="8dp"
+            android:inputType="textPersonName"
             android:background="@drawable/bg_rectangle_edittext"
             android:textColor="#80FFFFFF"/>
 

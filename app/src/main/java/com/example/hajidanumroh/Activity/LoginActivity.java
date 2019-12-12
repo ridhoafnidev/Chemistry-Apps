@@ -12,7 +12,6 @@ import com.example.hajidanumroh.Util.SharedPrefManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -48,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         ButterKnife.bind(this);
         mContext = this;
@@ -71,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // Code berikut berfungsi untuk mengecek session, Jika session true ( sudah login )
-        // maka langsung memulai MainActivity.
+        // maka langsung memulai AsqActivity.
         if (sharedPrefManager.getSPSudahLogin()){
             startActivity(new Intent(LoginActivity.this, MainActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
@@ -84,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        System.out.println("oke");
                         if (response.isSuccessful()){
                             loading.dismiss();
                             try {
@@ -95,12 +95,14 @@ public class LoginActivity extends AppCompatActivity {
                                     startActivity(new Intent(mContext, MainActivity.class)
                                             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                                     String id = jsonRESULTS.getJSONObject("user").getString("id_user");
-                                    String nama = jsonRESULTS.getJSONObject("user").getString("nama_lengkap");
+                                    String nama_awal = jsonRESULTS.getJSONObject("user").getString("nama_awal");
+                                    String nama_akhir = jsonRESULTS.getJSONObject("user").getString("nama_akhir");
                                     String email = jsonRESULTS.getJSONObject("user").getString("email");
                                     String nomor_hp = jsonRESULTS.getJSONObject("user").getString("nomor_hp");
                                     String restore_id = jsonRESULTS.getJSONObject("user").getString("restore_id");
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_ID, id);
-                                    sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA, nama);
+                                    sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA_AWAL, nama_awal);
+                                    sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA_AKHIR, nama_akhir);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_EMAIL, email);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_NOMOR_HP, nomor_hp);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_RESTORE_ID, restore_id);

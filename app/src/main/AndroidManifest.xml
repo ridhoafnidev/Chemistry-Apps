@@ -15,8 +15,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.RegisterActivity"></activity>
+        <activity android:name=".Activity.VideoDetailActivity"/>
+        <activity android:name=".Activity.KegiatanDetailActivity" />
+        <activity android:name=".Activity.DoaDetailActivity" />
+        <activity android:name=".Activity.LaranganDetailActivity" />
+        <activity android:name=".Activity.MateriDetailActivity" />
+        <activity android:name=".Activity.VideoActivity" />
+        <activity android:name=".Activity.MateriActivity" />
+        <activity android:name=".Activity.DoaActivity" />
+        <activity android:name=".Activity.TentangActivity" />
+        <activity android:name=".Activity.LaranganActivity" />
+        <activity android:name=".Activity.KegiatanActivity" />
+        <activity android:name=".Activity.HajiUmrahActivity" />
         <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
 
         <meta-data
             android:name="android.support.FILE_PROVIDER_PATHS"

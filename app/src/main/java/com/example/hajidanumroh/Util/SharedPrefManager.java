@@ -8,7 +8,8 @@ public class SharedPrefManager {
     public static final String SP_MAHASISWA_APP = "spHajiUmrahApp";
 
     public static final String SP_ID = "spId";
-    public static final String SP_NAMA = "spNama";
+    public static final String SP_NAMA_AWAL = "spNamaAwal";
+    public static final String SP_NAMA_AKHIR = "spNamaAkhir";
     public static final String SP_EMAIL = "spEmail";
     public static final String SP_NOMOR_HP = "spNomorHp";
     public static final String SP_RESTORE_ID = "spRestoreId";
@@ -38,8 +39,12 @@ public class SharedPrefManager {
         spEditor.commit();
     }
 
-    public String getSPNama(){
-        return sp.getString(SP_NAMA, "");
+    public String getSPNamaAwal(){
+        return sp.getString(SP_NAMA_AWAL, "");
+    }
+
+    public String getSPNamaAkhir(){
+        return sp.getString(SP_NAMA_AKHIR, "");
     }
 
     public String getSPId(){

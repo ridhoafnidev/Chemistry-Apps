@@ -12,6 +12,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,9 +33,13 @@ import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    @BindView(R.id.etNama) EditText etNama;
-    @BindView(R.id.etEmail) EditText etEmail;
-    @BindView(R.id.etPassword) EditText etPassword;
+    @BindView(R.id.et_username) EditText etUsername;
+    @BindView(R.id.et_nama_awal) EditText etNamaAwal;
+    @BindView(R.id.et_nama_akhir) EditText etNamaAkhir;
+    @BindView(R.id.et_email) EditText etEmail;
+    @BindView(R.id.et_no_hp) EditText etNoHp;
+    @BindView(R.id.et_alamat) EditText etAlamat;
+    @BindView(R.id.et_password) EditText etPassword;
     @BindView(R.id.btnRegister) Button btnRegister;
     ProgressDialog loading;
 
@@ -45,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         ButterKnife.bind(this);
         mContext = this;
@@ -55,14 +60,32 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
-                requestRegister();
+                String username = etUsername.getText().toString();
+                String nama_awal = etNamaAwal.getText().toString();
+                String nama_akhir = etNamaAkhir.getText().toString();
+                String email = etEmail.getText().toString();
+                String no_hp = etNoHp.getText().toString();
+                String alamat = etAlamat.getText().toString();
+                String password = etPassword.getText().toString();
+                if (TextUtils.isEmpty(username) || TextUtils.isEmpty(nama_awal) || TextUtils.isEmpty(nama_akhir) ||
+                    TextUtils.isEmpty(email) || TextUtils.isEmpty(no_hp) || TextUtils.isEmpty(alamat) || TextUtils.isEmpty(alamat) || TextUtils.isEmpty(password))
+                {
+                    Toast.makeText(mContext, "Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
+                }else{
+                    requestRegister();
+                }
             }
         });
     }
 
     private void requestRegister(){
-        mApiService.registerRequest(etNama.getText().toString(),
+        mApiService.registerRequest(
+                etUsername.getText().toString(),
+                etNamaAwal.getText().toString(),
+                etNamaAkhir.getText().toString(),
                 etEmail.getText().toString(),
+                etNoHp.getText().toString(),
+                etAlamat.getText().toString(),
                 etPassword.getText().toString())
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
