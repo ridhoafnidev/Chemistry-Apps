@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Haji dan Umroh</string>
+    <string name="app_name">Chemistry Apps</string>
     <string name="freshchat_file_provider_authority">com.example.demoapp.provider</string>
     <string name="label_faq">Your users can view all frequently asked questions before reaching out to you</string>
     <string name="label_btn_faq">FAQs</string>
@@ -15,16 +15,13 @@
     <string name="default_notification_channel_id">Default</string>
     <string name="webview_loading">Load Content... </string>
 
-
     <string name="middle_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
     <string name="haji">jenis</string>
-
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin
         \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin
     </string>
     <string name="about_text">Developer Oleh Sistem Informasi Uin Suska Riau</string>
-
 
 </resources>

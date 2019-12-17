@@ -52,8 +52,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:tint="@color/colorPrimary"
-                    app:srcCompat="@drawable/logo" />
+                    app:srcCompat="@drawable/logo_haji" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -87,16 +86,6 @@
                 android:textColor="@color/grey_80" />
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/bt_rate"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_xlarge"
-            android:gravity="center"
-            android:text="RATE THIS APP"
-            android:textColor="@color/colorAccent"
-            app:fontFamily="sans-serif-medium" />
 
         <View
             android:layout_width="0dp"
