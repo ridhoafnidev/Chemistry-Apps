@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(restoreId)){
             try {
                 freshchat.identifyUser(externalId, null);
+
             } catch (MethodNotAllowedException e) {
                 e.printStackTrace();
             }
