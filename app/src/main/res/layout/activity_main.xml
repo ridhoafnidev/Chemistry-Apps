@@ -43,15 +43,15 @@
                 android:layout_height="@dimen/spacing_large" />
 
             <LinearLayout
-                android:id="@+id/cv_haji_umrah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle">
+                android:paddingLeft="@dimen/spacing_small"
+                android:paddingRight="@dimen/spacing_small">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_petunjuk"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/spacing_xsmall"
@@ -70,15 +70,17 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center"
-                        android:padding="@dimen/spacing_large">
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:paddingBottom="@dimen/spacing_large">
 
                         <RelativeLayout
                             android:layout_width="40dp"
                             android:layout_height="40dp">
 
                             <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:layout_centerInParent="true"
                                 android:tint="@color/orange_400"
                                 app:srcCompat="@drawable/shape_circle" />
@@ -88,13 +90,13 @@
                                 android:layout_height="20dp"
                                 android:layout_centerInParent="true"
                                 android:tint="@android:color/white"
-                                app:srcCompat="@drawable/ic_business"
+                                app:srcCompat="@drawable/ic_help"
                                 tools:ignore="VectorDrawableCompat" />
 
                         </RelativeLayout>
 
                         <View
-                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_width="@dimen/spacing_medium"
                             android:layout_height="0dp" />
 
                         <LinearLayout
@@ -106,7 +108,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="Haji Umrah"
+                                android:text="Petunjuk"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                                 android:textColor="@color/grey_60"
                                 android:textStyle="bold" />
@@ -122,7 +124,7 @@
                     android:layout_height="0dp" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_kegiatan"
+                    android:id="@+id/cv_kompetensi"
                     android:layout_width="0dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
@@ -143,7 +145,10 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center"
-                        android:padding="@dimen/spacing_large">
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:paddingBottom="@dimen/spacing_large"
+                        >
 
                         <RelativeLayout
                             android:layout_width="40dp"
@@ -161,13 +166,13 @@
                                 android:layout_height="20dp"
                                 android:layout_centerInParent="true"
                                 android:tint="@android:color/white"
-                                app:srcCompat="@drawable/ic_account_circle"
+                                app:srcCompat="@drawable/ic_peoples"
                                 tools:ignore="VectorDrawableCompat" />
 
                         </RelativeLayout>
 
                         <View
-                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_width="@dimen/spacing_medium"
                             android:layout_height="0dp" />
 
                         <LinearLayout
@@ -179,7 +184,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="Kegiatan"
+                                android:text="Kompetensi"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                                 android:textColor="@color/grey_60"
                                 android:textStyle="bold" />
@@ -207,11 +212,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle">
+                android:paddingLeft="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_medium">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_larangan"
+                    android:id="@+id/cv_materi"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="false"
                     android:layout_width="0dp"
@@ -232,7 +237,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="@dimen/spacing_large">
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:paddingBottom="@dimen/spacing_large"
+                        >
 
                         <RelativeLayout
                             android:layout_width="40dp"
@@ -250,13 +258,13 @@
                                 android:layout_height="20dp"
                                 android:layout_centerInParent="true"
                                 android:tint="@android:color/white"
-                                app:srcCompat="@drawable/ic_close_black_24dp"
+                                app:srcCompat="@drawable/ic_book"
                                 tools:ignore="VectorDrawableCompat" />
 
                         </RelativeLayout>
 
                         <View
-                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_width="@dimen/spacing_medium"
                             android:layout_height="0dp" />
 
                         <LinearLayout
@@ -268,7 +276,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="Larangan"
+                                android:text="Materi"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                                 android:textColor="@color/grey_60"
                                 android:textStyle="bold" />
@@ -284,7 +292,7 @@
                     android:layout_height="0dp" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_doa"
+                    android:id="@+id/cv_evaluasi"
                     android:layout_width="0dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="false"
@@ -305,7 +313,10 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center"
-                        android:padding="@dimen/spacing_large">
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingTop="@dimen/spacing_large"
+                        android:paddingBottom="@dimen/spacing_large"
+                        >
 
                         <RelativeLayout
                             android:layout_width="40dp"
@@ -329,7 +340,7 @@
                         </RelativeLayout>
 
                         <View
-                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_width="@dimen/spacing_medium"
                             android:layout_height="0dp" />
 
                         <LinearLayout
@@ -341,7 +352,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="Do'a"
+                                android:text="Evaluasi"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                                 android:textColor="@color/grey_60"
                                 android:textStyle="bold" />
@@ -363,162 +374,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_asq_que"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:clickable="false"
-                    android:layout_marginLeft="@dimen/spacing_xsmall"
-                    android:layout_marginTop="@dimen/spacing_xsmall"
-                    android:layout_marginRight="@dimen/spacing_xsmall"
-                    android:layout_marginBottom="@dimen/spacing_xsmall"
-                    android:layout_weight="1"
-                    android:visibility="visible"
-                    app:cardCornerRadius="2dp"
-                    app:cardElevation="2dp">
-
-                    <LinearLayout
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:clickable="false"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:padding="@dimen/spacing_large">
-
-                        <RelativeLayout
-                            android:layout_width="40dp"
-                            android:layout_height="40dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_centerInParent="true"
-                                android:tint="@color/blue_grey_500"
-                                app:srcCompat="@drawable/shape_circle" />
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_centerInParent="true"
-                                android:tint="@android:color/white"
-                                app:srcCompat="@drawable/ic_receipt"
-                                tools:ignore="VectorDrawableCompat" />
-
-                        </RelativeLayout>
-
-                        <View
-                            android:layout_width="@dimen/spacing_middle"
-                            android:layout_height="0dp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:text="Asq &amp; Que"
-                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                                android:textColor="@color/grey_60"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <View
-                    android:layout_width="@dimen/spacing_middle"
-                    android:layout_height="0dp" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_tentang"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:clickable="false"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/spacing_xsmall"
-                    android:layout_marginTop="@dimen/spacing_xsmall"
-                    android:layout_marginRight="@dimen/spacing_xsmall"
-                    android:layout_marginBottom="@dimen/spacing_xsmall"
-                    android:layout_weight="1"
-                    android:visibility="visible"
-                    app:cardCornerRadius="2dp"
-                    app:cardElevation="2dp">
-
-                    <LinearLayout
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:clickable="false"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:padding="@dimen/spacing_large">
-
-                        <RelativeLayout
-                            android:layout_width="40dp"
-                            android:layout_height="40dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_centerInParent="true"
-                                android:tint="@color/amber_300"
-                                app:srcCompat="@drawable/shape_circle" />
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_centerInParent="true"
-                                android:tint="@android:color/white"
-                                app:srcCompat="@drawable/ic_bookmark" />
-
-                        </RelativeLayout>
-
-                        <View
-                            android:layout_width="@dimen/spacing_middle"
-                            android:layout_height="0dp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:text="Tentang"
-                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                                android:textColor="@color/grey_60"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_middle" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle">
+                android:paddingLeft="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_medium">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -562,8 +419,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle">
+                android:paddingLeft="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_medium">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
