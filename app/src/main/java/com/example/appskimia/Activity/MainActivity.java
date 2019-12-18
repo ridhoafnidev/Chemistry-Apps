@@ -3,28 +3,21 @@ package com.example.appskimia.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.appskimia.Adapter.AdapterSnapGeneric;
 import com.example.appskimia.BuildConfig;
@@ -32,26 +25,11 @@ import com.example.appskimia.Data.DataGenerator;
 import com.example.appskimia.Helper.StartSnapHelper;
 import com.example.appskimia.Model.Image;
 import com.example.appskimia.R;
-import com.example.appskimia.Response.ResponseUserDetail;
-import com.example.appskimia.Util.Api.BaseApiService;
-import com.example.appskimia.Util.Api.UtilsApi;
 import com.example.appskimia.Util.SharedPrefManager;
 import com.example.appskimia.Util.Tools;
 import com.freshchat.consumer.sdk.Freshchat;
-import com.freshchat.consumer.sdk.FreshchatConfig;
-import com.freshchat.consumer.sdk.FreshchatUser;
-import com.freshchat.consumer.sdk.exception.MethodNotAllowedException;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 import java.util.List;
-
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -78,21 +56,21 @@ public class MainActivity extends AppCompatActivity {
         cvKompetensi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), KegiatanActivity.class));
+                startActivity(new Intent(getApplicationContext(), KompetensiActivity.class));
             }
         });
 
         cvEvaluasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), LaranganActivity.class));
+                startActivity(new Intent(getApplicationContext(), EvaluasiActivity.class));
             }
         });
 
         cvMateri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), DoaActivity.class));
+                startActivity(new Intent(getApplicationContext(), MateriActivity.class));
             }
         });
 
