@@ -18,13 +18,33 @@
     <string name="middle_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
     <string name="haji">jenis</string>
     <string name="long_lorem_ipsum">
-        Duis tellus metus, elementum a lectus id, aliquet interdum mauris. Nam bibendum efficitur sollicitudin. Proin eleifend libero velit, nec fringilla dolor finibus quis. nMorbi eu libero pellentesque, rutrum metus quis, blandit est. Fusce bibendum accumsan nisi vulputate feugiat. In fermentum laoreet euismod. Praesent sem nisl, facilisis eget odio at, rhoncus scelerisque ipsum. Nulla orci dui, dignissim a risus ut, lobortis porttitor velit.
-        \n\nNulla id lectus metus. Maecenas a lorem in odio auctor facilisis non vitae nunc. Sed malesuada volutpat massa. Praesent sit amet lacinia augue, mollis tempor dolor.
+        Kita telah tahu bahwa larutan garam ada yang
+        bersifat asam, bersifat basa, dan bersifat netral.
+        sifat larutan garam dapat dijelaskan dengan konsep
+        hidrolisis. Hidrolisis merupakan istilah umum yang digunakan
+        untuk reaksi zat dengan air ( hidrolisis berasal dari kata hydro
+        yang berarti air dan lysis yang berarti penguraian). Menurut
+        konsep ini, komponen garam (kation dan anion) yang berasal
+        dari asam lemah atau basa lemahbereaksi dengan air
+        (terhidrolisis). Hidrolisis kation menghasilkan ion H3O+ (H+)
+        sehingga dengan hidrolisis anion menghasilkan ion OH-
     </string>
 
     <string name="long_lorem_ipsum_2">
-        Vivamus porttitor, erat at aliquam mollis, risus ligula suscipit metus, id semper nisi dui lacinia leo. Praesent at feugiat sem. Vivamus consectetur arcu sit amet metus efficitur dapibus. Sed metus ligula, efficitur quis finibus nec, pellentesque nec nulla. Nunc nec magna iaculis turpis vehicula condimentum id lobortis lectus.
-        \n\nQuisque augue diam, convallis nec mollis in, placerat nec elit. Aliquam non erat tristique, consequat tortor ultricies, sodales erat. Aliquam quis enim eu nulla facilisis sollicitudin eu mollis mauris. Donec ornare urna non libero volutpat tempus. Mauris elementum egestas ex, a laoreet urna. Ut a magna mattis, sodales massa a, blandit justo.
+        B. GARAM DARI BASA KUAT DAN ASAM LEMAH \n
+            garam yang berasal dari basa kuat dan
+            asam lemah bila dilarutkan dalam air menghasilkan
+            larutan yang bersifat basa. Contoh:
+        \n<b>CH<sub>3</sub>COONa<sub>(aq)</sub> →CH<sub>3</sub>COO-<sub>(aq)</sub>+ Na+<sub>(aq)</sub></b>
+        \nIon CH<sub>3</sub>COO- bereaksi dengan air membentuk
+            reaksi kesetimbangan:
+            CH3COONa(aq) + H2O(l) ⇄ CH3COOH(aq) + OH-
+            (aq)
+            Adanya ion OH- yang dihasilkan maka larutan
+            bersifat basa. Hidrolisis ini tergolong hidrolisis
+            sebagian sebabhanya sebgaian ion (ion CH3COO-
+            )
+            yang mengalami reaksi hidrolisis.
     </string>
 
     <string name="very_long_lorem_ipsum">
