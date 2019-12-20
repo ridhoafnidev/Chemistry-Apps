@@ -16,16 +16,16 @@ public class MainActivityRadioButtonMapper {
         String tag;
 
         switch (viewId) {
-            case R.id.first_question_first_answer:
+            case R.id.rb_jawaban_a:
                 tag = getStringResource(R.string.mapper_first_question_first_answer);
                 break;
-            case R.id.first_question_second_answer:
+            case R.id.rb_jawaban_b:
                 tag = getStringResource(R.string.mapper_first_question_second_answer);
                 break;
-            case R.id.first_question_third_answer:
+            case R.id.rb_jawaban_c:
                 tag = getStringResource(R.string.mapper_first_question_third_answer);
                 break;
-            case R.id.first_question_fourth_answer:
+            case R.id.rb_jawaban_d:
                 tag = getStringResource(R.string.mapper_first_question_fourth_answer);
                 break;
             /*

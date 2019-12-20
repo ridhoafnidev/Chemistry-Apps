@@ -49,7 +49,7 @@
 
     <!-- RadioButton values to show in the ui -->
     <string name="formulary_first_question">First question</string>
-    <string name="formulary_first_question_first_answer_title">Title A</string>
+    <string name="formulary_first_question_first_answer_title">A. Garam yang tersusun dari asam \nkuat dan basa lemah.</string>
     <string name="formulary_first_question_second_answer_title">Title B</string>
     <string name="formulary_first_question_second_answer_description">Description B</string>
     <string name="formulary_first_question_third_answer_title">Title C</string>
