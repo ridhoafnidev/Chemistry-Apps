@@ -3,53 +3,40 @@ package com.example.appskimia.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.appskimia.R;
 import com.example.appskimia.Util.Tools;
 
-public class EvaluasiActivity extends AppCompatActivity {
-    private EditText etNama;
-    private Button btnMulai;
-    private String nama;
+public class Pertanyaan1Activity extends AppCompatActivity {
+    static String IT_NAMA = "nama";
+    private Button btnPrev;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evaluasi);
+        setContentView(R.layout.activity_pertanyaan1);
         initToolbar();
         initComponent();
         initAction();
     }
 
-    private void initComponent() {
-        etNama = findViewById(R.id.et_nama);
-        btnMulai = findViewById(R.id.btn_mulai);
-        nama = etNama.getText().toString();
-    }
-
     private void initAction() {
-        btnMulai.setOnClickListener(new View.OnClickListener() {
+        btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (TextUtils.isEmpty(etNama.getText())){
-                    etNama.setError("Harus di isi...!");
-                }else{
-                    Intent intent = new Intent(getApplicationContext(), Pertanyaan1Activity.class);
-                    intent.putExtra(Pertanyaan1Activity.IT_NAMA, nama);
-                    startActivity(intent);
-                }
-
+                onBackPressed();
+                finish();
             }
         });
     }
 
+    private void initComponent() {
+        btnPrev =  findViewById(R.id.btn_prev);
+    }
 
     private void initToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -68,5 +55,4 @@ public class EvaluasiActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

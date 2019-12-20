@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.EvaluasiActivity"></activity>
+        <activity android:name=".Activity.Pertanyaan1Activity"></activity>
+        <activity android:name=".Activity.EvaluasiActivity" />
         <activity android:name=".Activity.MainActivity">
             <intent-filter tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.VideoDetailActivity" />
-        <activity android:name=".Activity.DoaDetailActivity" />
         <activity android:name=".Activity.VideoActivity" />
         <activity android:name=".Activity.MateriActivity" />
-        <activity android:name=".Activity.DoaActivity" />
         <activity android:name=".Activity.TentangActivity" />
         <activity android:name=".Activity.KompetensiActivity" />
         <activity android:name=".Activity.HajiUmrahActivity" />
