@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.DaftarPustakaActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_middle"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:text="Hidayat, riyan,dkk, 2014, panduan belajar kimia 2B, Jakarta: Yudhistira"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/freshchat_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="https://www.youtube.com/watch?v=w2Yxcy8MP_o"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/freshchat_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="https://www.youtube.com/watch?v=bOYLWbTkSk4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/freshchat_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="https://www.youtube.com/watch?v=tgQEJCS0D0M"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/freshchat_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="Sudarmo,unggul, 2014, kimia untuk  SMA/MA kelas XI, Jakarta: Erlangga"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/freshchat_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="Watoni, haris, A, 2014, kimia untuk SMA/MA kelas XI, Bandung: Yrama Widya"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/freshchat_black" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_middle" />
+
+    </LinearLayout>
+
+</LinearLayout>

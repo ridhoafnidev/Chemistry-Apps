@@ -1,74 +1,801 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_5"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+        <include layout="@layout/toolbar" />
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_pager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_medium"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/bg_gradient_very_soft" />
-
-        </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/grey_3"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/bt_back"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:tint="@color/grey_60"
-                app:srcCompat="@drawable/ic_arrow_back"
-                tools:ignore="VectorDrawableCompat" />
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/layoutDots"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
 
-            <ImageButton
-                android:id="@+id/bt_comments"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:tint="@color/grey_60"
-                app:srcCompat="@drawable/ic_chat_outline"
-                tools:ignore="VectorDrawableCompat" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Konsep Hidrolisis"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/test"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="Perhatikan vidio berikut:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <VideoView
+                    android:id="@+id/cv_video1"
+                    android:layout_width="450dp"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:gravity="center_horizontal"
+                    android:text="Berdasarkan asam konjugasi dan basa konjugasi penyusunnya jenis garam dikelompokkan menjadi 4, yaitu"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="A. GARAM DARI ASAM KUAT DAN BASA KUAT"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:background="@color/grey_20" />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/php" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_middle"
+                    android:text="Sumber: https://fphoto.photoshelter.com"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/freshchat_black" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/test2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="Contohnya: garam NaCl"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/red_800"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/kimia3"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/kimia4"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/kimia5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="Ion Na+ dan Cl- didalam air tidak bereaksi dengan air, sebab ion Na+  akan menghasilkan NaOH yang akan terionisasi kembali menjadi Na+, demikian pula dengan ion Cl- akan menghasilkan HCl yang dapat terionisasi kembali menjadi Cl-."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="Na+(aq) + H2O(l) → NaOH +	H+"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="Cl-(aq) + H2O(l) → HCl + OH"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/haji12" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="B. GARAM DARI BASA KUAT DAN ASAM LEMAH"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:background="@color/grey_20" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="garam yang berasal dari basa kuat dan asam lemah bila dilarutkan dalam air menghasilkan larutan yang bersifat basa. Contoh:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="CH3COONa(aq) → CH3COO-(aq) + Na+(aq)"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:autoSizeTextType="uniform"
+                    android:text="Dari reaksi diatas, hanya ion CH3COO- yang mengalami hidrlosis, sedangkan Na+ tidak bereaksi dengan air sebab NaOH yang dihasilkan akan terionisasi kembali menjadi ion Na+. \nReaksi Na+ dengan air: \n
+        Na+	+H2O → NaOH	+ H+, dan akan kembali menjadi ion Na+. \n
+        NaOH + CH3COOH → CH3COONa + H2O \n
+        CH3COONa(aq) → CH3COO-(aq) + Na+(aq) \n
+        Ion CH3COO- bereaksi dengan air membentuk reaksi kesetimbangan: \n
+        CH3COONa(aq) + H2O(l) ⇄ CH3COOH(aq) + OH-(aq) \n
+        \t Adanya ion OH- yang dihasilkan maka larutan bersifat basa. Hidrolisis ini tergolong hidrolisis sebagian sebab hanya sebgaian ion (ion CH3COO- ) yang mengalami reaksi hidrolisis."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gambarb01" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:text="\t PESISIRNEWS.com-Air sungai di sepanjang Desa Pintubosi, Kecamatan Laguboti, dan Desa Gasaribu, Kabupaten Toba Samosir, Sumatera Utara, berkualitas buruk bahkan beracun. Pencemaran ini, diduga dampak pengolahan limbah pabrik tepung tapioka, PT Hutahaean. Ikan-ikan di sungai itu mati.
+	\n \t Demikian diungkapkan Forum Mahasiswa Teknik Kimia Institut Teknologi Medan (ITM) asal Toba Samosir, pada Rabu (16/7/14) di Medan. Mereka baru saja menyelesaikan pemeriksaan laboratorium kualitas air sungai di daerah mereka.
+	\n \t Para mahasiswa ini berangkat ke Desa Pintubosi dan Gasaribu awal Juli 2014, mengambil sampel air dan meneliti penyebab utama berbagai jenis ikan mati tiba-tiba. Hasil pengujian memperlihatkan, ikan-ikan mati karena kualitas air sungai sepanjang Desa Pintubosi dan desa Gasaribu, buruk. PH air mengandung senyawa asam cukup tinggi. Ini sangat berbahaya apalagi masyarakat menggunakan air sungai untuk  minum, mencuci, dan mandi, dan lain-lain. (Rabu, 23 Juli 2014 09:02 WIB) Mongabay.com"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:text="\n Untuk mengatasi hal ini Limbah cairan yang bersifat asam dapat dinetralisir dengan penambahan garam"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambarb02" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:text="\nYang digunakan adalah garam karbonat seperti Na2CO3. Jika anda menjawab Na2CO3 yap anda benar.
+                    \nDimana reaksi hidrolisisnya adalah:
+                    \n\nCO32- +	2H2O ⇄ H2CO3 + 2OH-
+                    \n\nGaram Na2CO3 merupakan garam basa, karena ketika garam ini dilarutkan maka anion akan bereaksi dengan air menghasilkan ion OH-. Pernyataan tersebut dapat dibuktikan melalui reaksi-reaksi yang terjadi sebagai berikut:
+                    \n\nNa2CO3 → 2Na+ + CO32-
+                    \nNa+ + H2O ⇄ tidak bereaksi
+                    \nCO32- + 2H2O ⇄ H2CO3 + 2OH-
+                    \n\n1. Apakah nama senyawa dari Na2CO3 ?
+                    \n2. Menurut kalian setelah membaca berita diatas, masalah apakah yang sedang dibicarakan?
+                    \n3. Bagaimana pendapat anda tentang permasalahan diatas?
+                    "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:text="@string/klik_dibawah_ini_untuk_jawaban_kamu"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <ImageView
+                    android:id="@+id/btn_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/button" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edt_1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/red_800"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="C. GARAM DARI ASAM KUAT DAN BASA LEMAH"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:background="@color/grey_20" />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/php2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_middle"
+                    android:text="Sumber: https://fphoto.photoshelter.com"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/freshchat_black" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="\t Garam dari asam kuat dan basa lemah bila dilarutkan dalam air maka kation dari garam tersebut akan bereaksi dengan air dan menghasilkan ion  H+ yang menyebabkan larutan bersifat asam. Contohnya:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="NH4Cl(aq) → NH4+(aq) + Cl-(aq) "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="\t Dari reaksi diatas hanya ion NH4+ yang mengalami hidrolisis sedangkan Ion Cl- tidak mengalami hidrolisis sebab HCl yang dihasilkan akan segera terionisasi menghasilkan  Cl-. \nReaksinya:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="NH4+(aq) + H2O(l) ⇄ NH4OH(aq) + H+(aq) "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="HCl +	NH3	→ NH4Cl"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="NH4Cl(aq)	 → NH4+(aq) + Cl-(aq) \n"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="Ion NH4+ berekasi dengan air membentuk reaksi kesetimbangan: NH4+(aq) + H2O(l) ⇄ NH4OH(aq) + H+(aq)"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <ImageView
+                    android:layout_width="330dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambarc03" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/text_c_02"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <ImageView
+                    android:layout_width="330dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambarc04" />
+
+                <ImageView
+                    android:layout_width="330dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambarc05" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/text_c_03"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/text_c_04"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:text="@string/klik_dibawah_ini_untuk_jawaban_kamu"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <ImageView
+                    android:id="@+id/btn_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/button" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edt_2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/red_800"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="D. GARAM DARI ASAM LEMAH DAN BASA LEMAH"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:background="@color/grey_20" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/text_d_01"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <VideoView
+                    android:id="@+id/cv_video2"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_d_02"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_d_03"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:layout_gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:text="@string/text_d_04"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambard02" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_d_05"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:layout_gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:text="@string/text_d_06"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambard03" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:text="@string/text_d_07"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <VideoView
+                    android:id="@+id/cv_video3"
+                    android:layout_width="450dp"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Garam dari asam lemah basa kuat"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:layout_gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:text="@string/text_d_08"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambard04" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambard05" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:text="Untuk lebih paham dalam memahami perhitungan ph asam lemah dan basa kuat, perhatikan video berikut ini."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <VideoView
+                    android:id="@+id/cv_video4"
+                    android:layout_width="450dp"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:layout_height="250dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambard06" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:layout_gravity="center"
+                    android:text="@string/klik_dibawah_ini_untuk_jawaban_kamu"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80"/>
+
+                <ImageView
+                    android:id="@+id/btn_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/button" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edt_3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/red_800"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="4. Garam dari asam lemah dan basa lemah"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    app:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:background="@color/grey_20" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="Garam dari asamlemah dan basa lemah mengalami hidrolisis total, maka nilai pH dari garam dari asam lemah dan basa lemah tidak tergantung pada konsentrasi ion-ion garam dalam larutan tetapi tergantung pada nilai Ka dan Kb dari asam dan basa pembentuknya."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="Jika Ka = Kb maka larutan bersifat netral (pH = 7)"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/text_materi5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/text_materi6"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambard07" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="@dimen/spacing_mxlarge"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gambard08" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/text_materi6"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+                <com.uncopt.android.widget.text.justify.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/spacing_medium"
+                    android:text="@string/last"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_80" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_large" />
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
-</LinearLayout>
-
-
-
-
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

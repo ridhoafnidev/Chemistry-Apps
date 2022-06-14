@@ -16,17 +16,16 @@
     </integer-array>
 
     <string-array name="sample_images_name">
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
-
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
-        <item>Umrah dan Haji</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
+        <item>Kimia</item>
     </string-array>
 
     <integer-array name="people_images">

@@ -1,163 +1,107 @@
 package com.example.appskimia.Activity;
-
-import android.app.Dialog;
-import android.content.Context;
-import android.graphics.PorterDuff;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.appskimia.R;
 import com.example.appskimia.Util.Tools;
+import com.google.android.material.textfield.TextInputLayout;
 
 
 public class MateriActivity extends AppCompatActivity {
 
-    private static final int MAX_STEP = 4;
-
-    private ViewPager viewPager;
-    private MyViewPagerAdapter myViewPagerAdapter;
+    private ImageButton ibMateriNext, ibMateriPrev;
+    private VideoView vvTugas1;
+    private VideoView vvTugas2;
+    private VideoView vvTugas3;
+    private VideoView vvTugas4;
+    private TextInputLayout edt1, edt2, edt3;
+    private ImageView btn1, btn2, btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materi);
 
-        // adding bottom dots
-        bottomProgressDots(0);
-
         initComponent();
-
-        Tools.setSystemBarColor(this, R.color.grey_5);
+        initAction();
+        initToolbar();
+        Tools.setSystemBarColor(this, R.color.green_500);
         Tools.setSystemBarLight(this);
     }
 
-    private void bottomProgressDots(int current_index) {
-        LinearLayout dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        ImageView[] dots = new ImageView[MAX_STEP];
-
-        dotsLayout.removeAllViews();
-        for (int i = 0; i < dots.length; i++) {
-            dots[i] = new ImageView(this);
-            int width_height = 10;
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(new ViewGroup.LayoutParams(width_height, width_height));
-            params.setMargins(10, 10, 10, 10);
-            dots[i].setLayoutParams(params);
-            dots[i].setImageResource(R.drawable.shape_circle);
-            dots[i].setColorFilter(getResources().getColor(R.color.grey_20), PorterDuff.Mode.SRC_IN);
-            dotsLayout.addView(dots[i]);
-        }
-
-        if (dots.length > 0) {
-            dots[current_index].setImageResource(R.drawable.shape_circle);
-            dots[current_index].setColorFilter(getResources().getColor(R.color.grey_80), PorterDuff.Mode.SRC_IN);
-        }
+    private void initAction() {
+//        ibMateriNext.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MateriActivity.this, MateriNextActivity.class));
+//            }
+//        });
+//
+//        ibMateriPrev.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
     }
 
-
-    private void initComponent() {
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
-        myViewPagerAdapter = new MyViewPagerAdapter();
-        viewPager.setAdapter(myViewPagerAdapter);
-        viewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                bottomProgressDots(position);
-            }
-        });
-
-        ((ImageButton) findViewById(R.id.bt_comments)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showCommentsDialog();
-            }
-        });
-        ((ImageButton) findViewById(R.id.bt_back)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+    private void initToolbar(){
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Materi");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Tools.setSystemBarColor(this, R.color.green_500);
+        Tools.setSystemBarLight(this);
     }
 
-    private void showCommentsDialog() {
-        final Dialog dialog = new Dialog(this, R.style.BaseTheme);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
-        Tools.setSystemBarColorDialog(this, dialog, R.color.grey_5);
-        Tools.setSystemBarLightDialog(dialog);
-        dialog.setContentView(R.layout.dialog_article_comments);
-        dialog.setCancelable(true);
-
-        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-        lp.copyFrom(dialog.getWindow().getAttributes());
-        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
-
-        ((ImageButton) dialog.findViewById(R.id.bt_close)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
-        dialog.show();
-        dialog.getWindow().setAttributes(lp);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * View pager adapter
-     */
-    public class MyViewPagerAdapter extends PagerAdapter {
-        private LayoutInflater layoutInflater;
+    private void initComponent(){
+        vvTugas1 = findViewById(R.id.cv_video1);
+        vvTugas2 = findViewById(R.id.cv_video2);
+        vvTugas3 = findViewById(R.id.cv_video3);
+        vvTugas4 = findViewById(R.id.cv_video4);
 
-        public MyViewPagerAdapter() {
-        }
+        edt1 = findViewById(R.id.edt_1);
+        edt2 = findViewById(R.id.edt_2);
+        edt3 = findViewById(R.id.edt_3);
 
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View view = layoutInflater.inflate(R.layout.item_article_stepper, container, false);
-            TextView text = (TextView) view.findViewById(R.id.text);
-            if (position > 0) {
-                text.setVisibility(View.VISIBLE);
-                (view.findViewById(R.id.lyt_article_cover)).setVisibility(View.GONE);
-                if (position % 2 == 0) {
-                    text.setText(R.string.long_lorem_ipsum_2);
-                } else {
-                    text.setText(R.string.long_lorem_ipsum);
-                }
-            }
-            container.addView(view);
-            return view;
-        }
+        btn1 = findViewById(R.id.btn_1);
+        btn2 = findViewById(R.id.btn_2);
+        btn3 = findViewById(R.id.btn_3);
 
-        @Override
-        public int getCount() {
-            return MAX_STEP;
-        }
+        vvTugas1.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.vidio1));
+        vvTugas2.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.vidio2));
+        vvTugas3.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.vidio3));
+        vvTugas4.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.vidio4));
+        // digunakan untuk mengidentifikasi resource seperti lokasi video
+        vvTugas1.setMediaController(new MediaController(this));
+        vvTugas2.setMediaController(new MediaController(this));
+        vvTugas3.setMediaController(new MediaController(this));
+        vvTugas4.setMediaController(new MediaController(this));
+        // menampilkan media controller video
+        vvTugas1.stopPlayback();
+        vvTugas2.stopPlayback();
+        vvTugas3.stopPlayback();
+        vvTugas4.stopPlayback();
 
-        @Override
-        public boolean isViewFromObject(View view, Object obj) {
-            return view == obj;
-        }
-
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            View view = (View) object;
-            container.removeView(view);
-        }
+        btn1.setOnClickListener(v -> edt1.setVisibility(View.VISIBLE) );
+        btn2.setOnClickListener(v -> edt2.setVisibility(View.VISIBLE) );
+        btn3.setOnClickListener(v -> edt3.setVisibility(View.VISIBLE) );
     }
 }

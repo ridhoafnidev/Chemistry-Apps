@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.appskimia.ui.CustomRadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_custom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/first_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingBottom="16dp"
+            android:text="3."
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Ph dari larutan garam NH4Cl 0,1 M diketahui Kb NH4OH = 1 x 10-5 adalah...?"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <com.example.appskimia.ui.radiobutton.types.TwoFieldsCustomRadioButton
+        android:id="@+id/rb_jawaban_a"
+        android:layout_width="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_height="53dp"
+        android:background="@drawable/background_custom_radio_buttons_unselected_state"
+        app:description_rb_two_fields="4"
+        app:layout_constraintTop_toBottomOf="@+id/first_question"
+        app:title_rb_two_fields="A." />
+
+    <com.example.appskimia.ui.radiobutton.types.TwoFieldsCustomRadioButton
+        android:id="@+id/rb_jawaban_b"
+        android:layout_width="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_custom_radio_buttons_unselected_state"
+        app:description_rb_two_fields="4.5"
+        app:layout_constraintTop_toBottomOf="@+id/rb_jawaban_a"
+        app:title_rb_two_fields="B." />
+
+    <com.example.appskimia.ui.radiobutton.types.TwoFieldsCustomRadioButton
+        android:id="@+id/rb_jawaban_c"
+        android:layout_width="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_custom_radio_buttons_unselected_state"
+        app:description_rb_two_fields="5"
+        app:layout_constraintTop_toBottomOf="@+id/rb_jawaban_b"
+        app:title_rb_two_fields="C." />
+
+    <com.example.appskimia.ui.radiobutton.types.TwoFieldsCustomRadioButton
+        android:id="@+id/rb_jawaban_d"
+        android:layout_width="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="53dp"
+        android:background="@drawable/background_custom_radio_buttons_unselected_state"
+        app:description_rb_two_fields="4.5"
+        app:layout_constraintTop_toBottomOf="@+id/rb_jawaban_c"
+        app:title_rb_two_fields="D." />
+
+
+</com.example.appskimia.ui.CustomRadioGroup>

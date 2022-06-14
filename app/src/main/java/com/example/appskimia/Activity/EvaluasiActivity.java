@@ -34,7 +34,7 @@ public class EvaluasiActivity extends AppCompatActivity {
     private void initComponent() {
         etNama = findViewById(R.id.et_nama);
         btnMulai = findViewById(R.id.btn_mulai);
-        nama = etNama.getText().toString();
+
     }
 
     private void initAction() {
@@ -44,30 +44,29 @@ public class EvaluasiActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(etNama.getText())){
                     etNama.setError("Harus di isi...!");
                 }else{
+                    nama = etNama.getText().toString();
                     Intent intent = new Intent(getApplicationContext(), Pertanyaan1Activity.class);
                     intent.putExtra(Pertanyaan1Activity.IT_NAMA, nama);
                     startActivity(intent);
                 }
-
             }
         });
     }
 
 
-    private void initToolbar() {
+    private void initToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Evaluasi");
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(null);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Tools.setSystemBarColor(this);
+        Tools.setSystemBarColor(this, R.color.green_500);
+        Tools.setSystemBarLight(this);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
-        } else {
-            Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

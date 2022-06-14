@@ -56,13 +56,21 @@ public class KompetensiActivity extends AppCompatActivity {
         initComponent();
     }
 
-    private void initToolbar() {
+    private void initToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Kompetensi");
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Kompetensi");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Tools.setSystemBarColor(this, R.color.grey_5);
+        Tools.setSystemBarColor(this, R.color.green_500);
         Tools.setSystemBarLight(this);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void initComponent() {
@@ -71,15 +79,5 @@ public class KompetensiActivity extends AppCompatActivity {
 
     private void getResultListKegiatan(){
         // loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        } else {
-            Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

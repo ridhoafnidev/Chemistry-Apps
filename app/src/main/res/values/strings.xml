@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chemistry Apps</string>
+    <string name="app_name">Pembelajaran Kimia</string>
     <string name="freshchat_file_provider_authority">com.example.demoapp.provider</string>
     <string name="label_faq">Your users can view all frequently asked questions before reaching out to you</string>
     <string name="label_btn_faq">FAQs</string>
@@ -89,8 +89,99 @@
         \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin
     </string>
     <string name="about_text">Developer Oleh Sistem Informasi Uin Suska Riau</string>
-    <string name="menganalisis_garam">Menganalisis garam yang mengalami hidrolisis</string>
-    <string name="kompetensi_dasar">Kompetensi Dasar</string>
+    <string name="menganalisis_garam">Menganalisis keseimbangan ion dalam larutan garam dan menghubungkan pH nya</string>
+    <string name="kompetensi_dasar">Kompetensi\nDasar</string>
     <string name="indikator">Indikator</string>
+    <string name="kimia_kasus2"><b>Na2CO3 → 2Na+ + CO32- CO32- + H2O ⇄ HCO3- + OH-</b></string>
+    <string name="kimia_kasus1"><b>(NH4)2SO4 → 2NH4+ +SO4 NH4+ +H2O ⇄ NH3 + H3O+</b></string>
+    <string name="test">sifat larutan garam dapat dijelaskan dengan  konsep hidrolisis. Hidrolisis merupakan istilah umum yang digunakan untuk reaksi zat dengan air ( hidrolisis berasal dari kata hydro yang berarti air dan lysis yang berarti penguraian). Dimana hidrolisis adalah reaksi kimia yang memecah molekul air (H2O) menjadi kation hidrogen (H+) dan anion hidroksida (OH-). Larutan garam dalam air ada yang bersifat asam, basa atau netral. Hal ini terjadi karena komponen garam (yaitu kation dan anion) yang berasal dari asam lemah atau basa lemah bereaksi dengan air, hidrolisis kation akan menghasilkan ion H+, sedangkan hidrolisis anion akan menghasilkan ion OH-. Dimana semakin kuat suatu asam, semakin lemah basa konjugasinya, dan sebaliknya. Jadi komponen garam yang berasal dari asam lemah atau basa lemah merupakan basa atau asam konjugasi yang relatif kuat, dapat beraksi dengan air, sedangkan komponen garamyang berasal dari asam kuat atau basa kuat merupakan basa atau asam konjugasi lemah tidak dapat bereaksi dengan air.</string>
+    <string name="test2">Jenis garam ini dilarutkan dalam air, baik kation maupun anionnya tidak bereaksi dengan air karena ion-ion yang dilepaskan akan terionisasi kembali secara sempurna.</string>
+    <string name="kimia3">NaCl(aq) → Na+(aq) + Cl-(aq)</string>
+    <string name="kimia4">Na+(aq) + H2O(l) → (tidak ada bereaksi)</string>
+    <string name="kimia5">Cl-(aq) + H2O(l) → (tidak ada bereaksi)</string>
+    <string name="rumus1">K<sub>h</sub> = 1/<i>K<sub>b</sub></i> X K<sub>w</sub></string>
+    <string name="text_materi01"><![CDATA[Garam dari asam kuat dan basa lemah mempunyai pH < 7 (bersifat asam).]]></string>
+    <string name="text_materi02"><![CDATA[Jika Ka = Kb maka larutan bersifat netral (pH = 7) Jika Ka > Kb maka larutan bersifat asam (pH < 7) Jika Ka >< Kb maka larutan bersifat basa (pH > 7)]]></string>
+    <string name="text_materi5"><![CDATA[Jika Ka > Kb maka larutan bersifat asam (pH < 7)]]></string>
+    <string name="text_materi6"><![CDATA[Jika Ka < Kb maka larutan bersifat basa (pH > 7)]]></string>
+    <string name="haha"><![CDATA[Sifat garam ini tergantung pada nilai pH. Jika Ka > Kb, Ka < Kb, maka larutan akan bersifat asam dan jika Ka Kb, maka larutan akan bersifat basa.]]></string>
+
+    <!-- region number 9  -->
+
+    <string name="NaOCL">NaOCL</string>
+    <string name="na">Na<sup>+</sup></string>
+    <string name="ocl">OCL<sup>-</sup></string>
+    <string name="na_ocl">Na<sup>+</sup>dan OCL<sup>-</sup></string>
+
+    <!-- endregion   -->
+    <!-- region number 10   -->
+
+    <string name="ques_10">Larutan NH4Cl dalam air mempunyai pH &lt; 7. Penjelasan hal ini adalah </string>
+    <string name="opt_a_10">NH4<sup>+</sup> menerima proton dari air</string>
+    <string name="opt_b_10">Cl<sup>–</sup> bereaksi dengan air membentuk HCl</string>
+    <string name="opt_c_10">NH<sub>4</sub><sup>+</sup>dapat memberi proton kepada air</string>
+    <string name="opt_d_10">NH<sub>4</sub>Cl mudah larut dalam air</string>
+    <string name="klik_dibawah_ini_untuk_jawaban_kamu"><b>Klik dibawah ini untuk jawaban kamu</b></string>
+    <string name="text_c_02">Adanya ion H+ yang dihasilkan dari reaksi tersebut mengakibatkan konsenrasi ion H<sup>+</sup> di dalam air lebih banyak dari pada konsentrasi ion OH<sup>-</sup> sehingga larutan bersifat asam.</string>
+    <string name="text_c_03">
+    BANJARMASINPOST.CO.ID, Keluhan petani terkait padi yang membusuk di Desa Lasung Batu Kecamatan Paringin, Balangan mendapat respon cepat dari Dinas Pertanian Tanaman Pangan Hortikultura Peternakan Perikanan (PTPHPP) Balangan.\n
+	\t\t\t\tSenin (21/3/2016) rombongan bersama Badan Pelaksanaan Penyuluhan dan Ketahanan Pangan Kabupaten Balangan melakukan pantauan langsung ke lapangan, bahkan di lapangan dilakukan uji coba menggunakan perangkat uji tanah sementara.\n
+	\t\t\t\tKoordinator Pengamat Hama Padi Balangan Wahyudi yang melakukan uji tanah, mengatakan, membusuknya tanaman padi milik warga yang diberitakan kemarin bukan karena serangan hama atau penyakit, tetapi karena kadar tanah tak semestinya.
+	\t\t\t\tBukan karena hama atau penyakit, setelah kami teliti tanah disini agak masam yakni ph 4, seharusnya netral yakni ph tanah harus 6, selain itu kandungan kalium tanah juga rendah, jelasnya.
+    \nhttps://banjarmasin.tribunnews.com/2016/03/22 Penulis: Elhami | Editor: Eka Dinayanti
+    </string>
+    <string name="text_c_04">
+        \n\t\t\t\Tanaman dapat tumbuh pada suatu batasan tertentu. Oleh karena itu pH tanah di daerah pertanian harus disesuaikan dengan pH tanamannya. Untuk menjaga pH-nya agar tetap sama, diperlukan pupuk agar tidak terlalu asam atau basa. Salah satu cara mengatur pH tanah adalah dengan pupuk berupa garam seperti (NH4)2SO4.]
+        Reaksi hidrolisis garam <b>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></b>
+        \n\n
+        NH<sub>4</sub><sup>+</sup> + H<sub>2</sub>O	⇄ NH<sub>4</sub>OH + <b>H<sup>+</sup></b>\n
+        (NH4)2SO4 →	2NH4+ + SO42-\n
+        SO42- +	H2O	→ tidak ada reaksi\n
+        NH4+ + H2O ⇄ NH4OH + H+
+        \n\n
+        <b>apa nama senyawa dari (NH4)2SO4  ?
+        Menurut kalian setelah membaca berita diatas, masalah apakah yang sedang dibicarakan?\n</b>
+    </string>
+    <string name="text_d_01">
+        Jika garam jenis ini dilarutkan dalam air, maka kation dan anionnya akan mengalami hidrolisis, sehingga disebut hidrolisis total.
+    Contohnya:\n\n
+
+    NH4CN(aq) → NH4+(aq) + CN-(aq) \n\n
+
+    Ion NH4+ bereaksi dengan air membentuk reaksi kesetimbangan:\n
+    NH4+(aq) + H2O(l) ⇄ NH4OH(aq) + H+(aq)\n
+    Ion CN- bereaksi dengan air membentuk reaksi kesetimbangan:\n
+    CN-(aq) + H2O(l) ⇄ HCN(aq) + OH-(aq)\n\n
+
+    \t\t\t\tKedua reaksi tersebut menghasilkan ion H<sup>+</sup> dan OH<sup>-</sup>,. Sehingga daram yang berasal dari dari asam lemah dan basa lemah mengalami hirolisis total (sempurna) di dalam air. Sifat garam ini tergantung pada nilai pH. Jika K<sub>a</sub>>K<sub>b</sub>, maka larutan akan bersifat asam dan jika K<sub>a</sub> K<sub>b</sub>, maka larutan akan bersifat b\n\n
+
+
+        \t\t\t\t<b>Perhatikan video animasi dibawah ini! Ada 4 larutan yaitu CH3COONH4, NH4Cl, CH3COOK, dan KCl.</b>
+
+    </string>
+
+    <string name="text_d_02">pH LARUTAN GARAM</string>
+    <string name="text_d_03">1. Garam dari asam kuat dan basa kuat</string>
+    <string name="text_d_04">\t\t\t\tGaram yang berasal dari asam kuat dan basa kuat karena tidak terhidrolisis garamnya bersifat netral.\nContoh soal:\nHitunglah pH larutan dari NH4Cl 0,1 M dengan Kh = 10-9</string>
+    <string name="text_d_05">2. Garam dari asam kuat dan basa lemah</string>
+    <string name="text_d_06">Garam dari asam kuat dan basa lemah mempunyai pH  7 (bersifat asam).\n\n
+        <b>K<sub>h</sub> = 𝟏/𝑲<sub>𝒃</sub>  x K<sub>w</sub></b>\n\n
+        Dan karena bersifat asam, maka dapat ditentukan nilai konsentrasi ion H<sup>+</sup>:</string>
+    <string name="text_d_07">Yuk simak video beriku ini untuk lebih mudah memahami perhitungan pH!</string>
+    <string name="text_d_08">\t\t\t\tGaram dari asam lemah dan basa kuat mempunyai pH > 7 (bersifat basa).\nmisal asam lemah dilambangkan HA\nA<sup>-</sup> + H2O ⇄ HA + OH<sup>-</sup>
+    </string>
+    <string name="last"><b>Hitunglah ph larutan garam CH3COONa  0,1 M dan tentukan sifatnya! (Ka = 10-10)\nPembahasan:</b>\n
+        CH<sub>3</sub>COONa  merupakan campuran asam lemah dan basa kuat sehingga bersifat basa. Ph dihitung dengan rumus berikut:</string>
+    <string name="answer_a_08">2 x 10<sup>-4</sup></string>
+    <string name="answer_b_08">2 x 10<sup>-5</sup></string>
+    <string name="answer_c_08">4 x 10<sup>-4</sup></string>
+    <string name="answer_d_08">4 x 10<sup>-5</sup></string>
+    <string name="anser_b_05"><![CDATA[Ka < Kb]]></string>
+    <string name="answer_c_05"><![CDATA[Kb > Ka]]></string>
+    <string name="answer_d_05">Ka = Kb</string>
+    <string name="answer_a_05">Ka > Kb></string>
+
+    <!--    endregion   -->
+
 
 </resources>

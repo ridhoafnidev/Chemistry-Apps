@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_5"
+        android:clipToPadding="false"
+        android:padding="@dimen/spacing_mlarge"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Kasus 1 :"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Teka-teki membusuknya tanaman padi di desa lasung batu, masalah pada tanaman."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/freshchat_black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:scaleType="centerInside"
+                android:src="@drawable/kasus1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="Dari gambar diatas bagaimanakah komentar anda dan solusi dari gambar tersebut..?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/freshchat_black" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:textStyle="italic"
+                android:textColor="@color/red_200"
+                android:text=" Klik dalam kolom dan tulis komentar anda"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:background="@color/grey_3"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_komentar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:gravity="start"
+                    android:hint="Masukkan komentar anda"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:textColorHint="@color/grey_20" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/btn_rounded_green_300"
+                android:text="S U B M I T"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <LinearLayout
+                android:id="@+id/ll_komentar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="@dimen/spacing_small"
+                    android:text="Komentar :"
+                    android:textStyle="italic"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="serif" />
+
+                <TextView
+                    android:id="@+id/tv_komentar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="@dimen/spacing_small"
+                    android:text="Cursus convallis dolor. Etiam vel lacinia nibh. Donec sollicitudin fermentum"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/grey_60"
+                    app:fontFamily="serif" />
+
+                <Button
+                    android:id="@+id/btn_solusi"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:background="@drawable/btn_rounded_green_300"
+                    android:text="S O L U S I"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_solusi_hide"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:background="@drawable/btn_rounded_green_300"
+                    android:text="H I D E  S O L U S I"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/white" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_middle" />
+                <LinearLayout
+                    android:id="@+id/ll_solusi"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/spacing_small"
+                        android:text="Solusi :"
+                        android:textStyle="italic"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@android:color/black"
+                        app:fontFamily="serif" />
+
+                    <com.uncopt.android.widget.text.justify.JustifiedTextView
+                        android:id="@+id/tv_solusi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/spacing_small"
+                        android:text="      Tanaman dapat tumbuh pada suatu batasan tertentu. Oleh karena itu pH tanah di daerah pertanian harus disesuaikan dengan pH tanamannya. Untuk menjaga pH-nya agar tetap sama, diperlukan pupuk agar tidak terlalu asam atau basa. Salah satu cara mengatur pH tanah adalah dengan pupuk berupa garam seperti (NH4)2SO4."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60"
+                        app:fontFamily="serif" />
+
+                    <com.uncopt.android.widget.text.justify.JustifiedTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/spacing_small"
+                        android:text="@string/kimia_kasus1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60"
+                        app:fontFamily="serif" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_middle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:text="Kasus 2 :"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:text="Air sungai yang tercemar berkualitas buruk dan pH air mengandung senyawa asam yang cukup tinggi. "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/freshchat_black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/kasus2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:text="Dari gambar diatas bagaimanakah komentar anda dan solusi dari gambar tersebut..?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/freshchat_black" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_middle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:textStyle="italic"
+                    android:textColor="@color/red_200"
+                    android:text=" Klik dalam kolom dan tulis komentar anda"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:background="@color/grey_3"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_komentar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_round_bg_outline"
+                        android:gravity="start"
+                        android:hint="Masukkan komentar anda"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:textColorHint="@color/grey_20" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_submit2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:background="@drawable/btn_rounded_green_300"
+                    android:text="S U B M I T"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/white"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_middle" />
+
+                <LinearLayout
+                    android:id="@+id/ll_komentar2"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/spacing_small"
+                        android:text="Komentar :"
+                        android:textStyle="italic"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@android:color/black"
+                        app:fontFamily="serif" />
+
+                    <TextView
+                        android:id="@+id/tv_komentar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/spacing_small"
+                        android:text="Cursus convallis dolor. Etiam vel lacinia nibh. Donec sollicitudin fermentum"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/grey_60"
+                        app:fontFamily="serif" />
+
+                    <Button
+                        android:id="@+id/btn_solusi2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:background="@drawable/btn_rounded_green_300"
+                        android:text="S O L U S I"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/btn_solusi_hide2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:background="@drawable/btn_rounded_green_300"
+                        android:text="H I D E  S O L U S I"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_middle" />
+                    <LinearLayout
+                        android:id="@+id/ll_solusi2"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:gravity="center_vertical"
+                            android:lineSpacingExtra="@dimen/spacing_small"
+                            android:text="Solusi :"
+                            android:textStyle="italic"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/black"
+                            app:fontFamily="serif" />
+
+                        <com.uncopt.android.widget.text.justify.JustifiedTextView
+                            android:id="@+id/tv_solusi2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:gravity="center_vertical"
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="@dimen/spacing_small"
+                            android:text="      Dari penjelasan gambar diketahui bahwa air tersebut telah tercamar dan memiliki kualitas yang buruk serta memiliki pH airnya mengandung senyawa asam yang cukup tinggi, hal tersebut lah yang menyebabkan ikan-ikan disungai tersebut pada mati. Pencemaran tersebut bisa dihasilkan dari limbah pabrik yang berada disekitar sungai tersebut."
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/grey_60"
+                            app:fontFamily="serif" />
+
+                        <com.uncopt.android.widget.text.justify.JustifiedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:gravity="center_vertical"
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="@dimen/spacing_small"
+                            android:text="      Untuk mengatasi kejadian tersebut dapat dinetralisisr dengan penambahan garam karbonat Na2CO3 kedalam air (karena limbahnya bersifat asam), dimana garam karbonat Na2CO3 jika dilarutkan kedalam air akan mengalami hidrolisis melepas ion OH- yang akan menaikkan pH air Reaksinya:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/grey_60"
+                            app:fontFamily="serif" />
+
+                        <com.uncopt.android.widget.text.justify.JustifiedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:gravity="center_vertical"
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="@dimen/spacing_small"
+                            android:text="@string/kimia_kasus2"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/grey_60"
+                            app:fontFamily="serif" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
