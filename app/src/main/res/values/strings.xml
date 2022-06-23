@@ -94,7 +94,7 @@
     <string name="indikator">Indikator</string>
     <string name="kimia_kasus2"><b>Na2CO3 → 2Na+ + CO32- CO32- + H2O ⇄ HCO3- + OH-</b></string>
     <string name="kimia_kasus1"><b>(NH4)2SO4 → 2NH4+ +SO4 NH4+ +H2O ⇄ NH3 + H3O+</b></string>
-    <string name="test">sifat larutan garam dapat dijelaskan dengan  konsep hidrolisis. Hidrolisis merupakan istilah umum yang digunakan untuk reaksi zat dengan air ( hidrolisis berasal dari kata hydro yang berarti air dan lysis yang berarti penguraian). Dimana hidrolisis adalah reaksi kimia yang memecah molekul air (H2O) menjadi kation hidrogen (H+) dan anion hidroksida (OH-). Larutan garam dalam air ada yang bersifat asam, basa atau netral. Hal ini terjadi karena komponen garam (yaitu kation dan anion) yang berasal dari asam lemah atau basa lemah bereaksi dengan air, hidrolisis kation akan menghasilkan ion H+, sedangkan hidrolisis anion akan menghasilkan ion OH-. Dimana semakin kuat suatu asam, semakin lemah basa konjugasinya, dan sebaliknya. Jadi komponen garam yang berasal dari asam lemah atau basa lemah merupakan basa atau asam konjugasi yang relatif kuat, dapat beraksi dengan air, sedangkan komponen garamyang berasal dari asam kuat atau basa kuat merupakan basa atau asam konjugasi lemah tidak dapat bereaksi dengan air.</string>
+    <string name="test">Sifat larutan garam dapat dijelaskan dengan  konsep hidrolisis. Hidrolisis merupakan istilah umum yang digunakan untuk reaksi zat dengan air ( hidrolisis berasal dari kata hydro yang berarti air dan lysis yang berarti penguraian). Dimana hidrolisis adalah reaksi kimia yang memecah molekul air (H2O) menjadi kation hidrogen (H+) dan anion hidroksida (OH-). Larutan garam dalam air ada yang bersifat asam, basa atau netral. Hal ini terjadi karena komponen garam (yaitu kation dan anion) yang berasal dari asam lemah atau basa lemah bereaksi dengan air, hidrolisis kation akan menghasilkan ion H+, sedangkan hidrolisis anion akan menghasilkan ion OH-. Dimana semakin kuat suatu asam, semakin lemah basa konjugasinya, dan sebaliknya. Jadi komponen garam yang berasal dari asam lemah atau basa lemah merupakan basa atau asam konjugasi yang relatif kuat, dapat beraksi dengan air, sedangkan komponen garamyang berasal dari asam kuat atau basa kuat merupakan basa atau asam konjugasi lemah tidak dapat bereaksi dengan air.</string>
     <string name="test2">Jenis garam ini dilarutkan dalam air, baik kation maupun anionnya tidak bereaksi dengan air karena ion-ion yang dilepaskan akan terionisasi kembali secara sempurna.</string>
     <string name="kimia3">NaCl(aq) → Na+(aq) + Cl-(aq)</string>
     <string name="kimia4">Na+(aq) + H2O(l) → (tidak ada bereaksi)</string>
@@ -122,7 +122,8 @@
     <string name="opt_c_10">NH<sub>4</sub><sup>+</sup>dapat memberi proton kepada air</string>
     <string name="opt_d_10">NH<sub>4</sub>Cl mudah larut dalam air</string>
     <string name="klik_dibawah_ini_untuk_jawaban_kamu"><b>Klik dibawah ini untuk jawaban kamu</b></string>
-    <string name="text_c_02">Adanya ion H+ yang dihasilkan dari reaksi tersebut mengakibatkan konsenrasi ion H<sup>+</sup> di dalam air lebih banyak dari pada konsentrasi ion OH<sup>-</sup> sehingga larutan bersifat asam.</string>
+    <string name="text_c_02">Adanya ion H<sup>+</sup> yang dihasilkan dari reaksi tersebut mengakibatkan konsenrasi ion H<sup>+</sup> di dalam air lebih banyak dari pada konsentrasi ion OH<sup>-</sup> sehingga larutan bersifat asam.</string>
+    <string name="text_c_desc1">\t Ion CL<sup>-</sup> tidak mempunyai afinitas untuk ion H<sup>+</sup>. Ion amonium NH<sub>4</sub><sup>+</sup> adalah asam konjugat lemah dari basa lemah NH<sub>3</sub> yang mengalami hidrolisis sedangkan Ion Cl<sup>-</sup> tidak mengalami hidrolisis sebab HCl yang dihasilkan akan segera terionisasi menghasilkan  Cl<sup>-</sup>. \nReaksinya:</string>
     <string name="text_c_03">
     BANJARMASINPOST.CO.ID, Keluhan petani terkait padi yang membusuk di Desa Lasung Batu Kecamatan Paringin, Balangan mendapat respon cepat dari Dinas Pertanian Tanaman Pangan Hortikultura Peternakan Perikanan (PTPHPP) Balangan.\n
 	\t\t\t\tSenin (21/3/2016) rombongan bersama Badan Pelaksanaan Penyuluhan dan Ketahanan Pangan Kabupaten Balangan melakukan pantauan langsung ke lapangan, bahkan di lapangan dilakukan uji coba menggunakan perangkat uji tanah sementara.\n
@@ -180,6 +181,7 @@
     <string name="answer_c_05"><![CDATA[Kb > Ka]]></string>
     <string name="answer_d_05">Ka = Kb</string>
     <string name="answer_a_05">Ka > Kb></string>
+    <string name="contohnya_garam_nacl">Contohnya: garam NaNO<sub>3</sub></string>
 
     <!--    endregion   -->
 
