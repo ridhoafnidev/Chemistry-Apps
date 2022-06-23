@@ -753,14 +753,6 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:textColor="@color/grey_80" />
 
-                <com.uncopt.android.widget.text.justify.JustifiedTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingExtra="@dimen/spacing_medium"
-                    android:text="@string/last"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_80" />
-
 
             </LinearLayout>
 
